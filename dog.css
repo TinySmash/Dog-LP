@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    display: flex;
+    background-color: beige;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("dogs-sitting.jpeg"); /*Put your image url*/
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+}
+
+.circle
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: wheat;
+    border: 1px solid wheat;
+    right: -10%;
+    top: 0;
+    opacity: 80%;
+    clip-path: circle(600px at right 500px);
+    z-index: 1;
+}
+
+.dog
+{
+    z-index: 999;
+    position: absolute;
+    right: 5%;
+    width: 550px;
+}
+
+#navbar
+{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+}
+
+ul, li, a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav-items
+{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.nav-anchor
+{
+    color: black;
+    cursor: pointer;
+}
