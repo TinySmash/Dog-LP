@@ -10,14 +10,15 @@
 body{
     display: flex;
     background-color: beige;
-    max-width: 100%;
+    max-width: 150%;
     overflow-x: hidden;
+    height: 200vh;
 }
 
 body::before
 {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -32,31 +33,39 @@ body::before
 .circle
 {
     width: 100%;
-    height: 100%;
+    height: 200%;
     position: absolute;
     background-color: wheat;
-    border: 1px solid wheat;
-    right: -10%;
+    right: 0;
     top: 0;
     opacity: 80%;
-    clip-path: circle(600px at right 500px);
+    clip-path: circle(600px at right 600px );
     z-index: 1;
 }
 
 .dog
 {
-    z-index: 999;
+    z-index: 99;
     position: absolute;
     right: 5%;
     width: 550px;
+    top: 80px;
+}
+
+.scd-dog
+{
+    z-index: 99;
+    position: absolute;
+    right: 15%;
+    width: 450px;
+    top: 100%;
 }
 
 #navbar
 {
-    display: flex;
+    display: block;
     width: 100%;
     height: auto;
-    justify-content: space-between;
 }
 
 ul, li, a{
@@ -64,15 +73,86 @@ ul, li, a{
     text-decoration: none;
 }
 
+
+
 .nav-items
 {
+    z-index: 999;
+    width: 80%;
     display: flex;
+    justify-content: space-around;
     position: relative;
-    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+
 
 .nav-anchor
 {
+    position: relative;
     color: black;
     cursor: pointer;
+    margin-left:10% ;
+    top: 15px;
+    white-space: nowrap;
+    border-bottom: 1px solid black;
+}
+
+.title
+{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 6% ;
+    width: 47%;
+    z-index: 999;
+    margin-bottom: 30px;
+}
+
+p
+{
+    position: absolute;
+    margin-top: 290px;
+    left: 6%;
+    z-index: 999;
+    font-size: 20px;
+}
+
+.submenu
+{
+
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 200px;
+    justify-content: space-around;
+    border: 2px solid black;
+    top: 190%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+}
+
+
+@media screen and (max-width : 920px)
+{
+    .dog
+    {
+        z-index: 99;
+        position: absolute;
+        right: -9%;
+        width: 550px;
+    }
+    .circle
+    {
+        right: -25%
+    }
+    .title
+    {
+        margin-top: 180px;
+    }
+    p 
+    {
+        width: 45%;
+    }
 }
